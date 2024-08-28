@@ -1,0 +1,25 @@
+{
+  "name": "knowland-automation",
+  "version": "1.0.0",
+  "description": "Automation for Knowland Proyect with Playwright + Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "keywords": [
+    "pw",
+    "ts",
+    "js"
+  ],
+  "author": "Nicolas Koriakos",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.46.1",
+    "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.46.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
