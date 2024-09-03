@@ -5,6 +5,7 @@ Feature: Smart Search
         When I access with my credentials "testinguser@gmail.com", "June@2024"
         When I choose unlimited_markets client on client
         Then I am on Knowland Home Page
+        
     @2
     Scenario: New Smart Search
         When I click on Accounts & Events tab "id=edit-btn-Accounts-&-Events"
