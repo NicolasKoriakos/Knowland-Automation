@@ -16,9 +16,9 @@ Before( async function(){
 })
 
 After( async function(){
-  //browser.close();
-  //browserContext.close();
-  //page.close();
+  browser.close();
+  browserContext.close();
+  page.close();
 })
 
 export function getPage():Page{
