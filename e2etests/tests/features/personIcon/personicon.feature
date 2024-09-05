@@ -8,7 +8,10 @@ Feature: Person Icon
     
   @1  
   Scenario: Search Settings
-    When I click on Name Initials button "id=user-initials"
-    When I chooce Search Settings option "id=search_settings" 
-    When I search Master Account ID "6462"
-    Then Verify that "id=header-title-dashboard" contains "Marriott Albuquerque"
+    When I click on "name_initials" element on Home Page
+    And I click on "search_settings" element on Home Page
+    And I clear "master_account_search_input" element on Account Search Page
+    And I send the keys "6462" to the "master_account_search_input" element on Account Search Page
+    And I click on "master_account_search_button" element on Account Search Page
+    And I click on "apply_and_exit" element on Account Search Page
+    Then Verify than "dashboard_account_name" changed to "Marriott Albuquerque" on Home Page

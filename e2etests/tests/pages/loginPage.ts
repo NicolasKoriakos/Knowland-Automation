@@ -20,7 +20,7 @@ export default class LoginPage{
     }
 
     async selectClient(){
-        await this.page.waitForTimeout(9000);
+        await this.page.waitForTimeout(10000);
         let url = this.page.url();
         await this.page.locator("id=client-btn-7811").click();
         let newUrl = this.page.url();
@@ -40,7 +40,7 @@ export default class LoginPage{
         if (`${knowland}` === `Knowland`) {
              console.log("pass");
         } else {
-            console.log("fail");
+            console.log("failed to log in");
         } 
     }
 }

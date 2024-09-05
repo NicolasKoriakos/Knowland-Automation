@@ -1,24 +1,23 @@
-import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
-import HomePage from "../../tests/pages/homePage";
-import { getPage } from "../../corelib/corelib.spec";
+import { When, setDefaultTimeout } from '@cucumber/cucumber';
+import AccountSearchPage from '../pages/accountSearchPage';
+import { getPage } from '../../corelib/corelib.spec';
+import {AccountSearchPageUtils} from '../utils/accountSearchPage.util';
 
-let homePage:HomePage;
+let accountSearchPage:AccountSearchPage;
+
 
 setDefaultTimeout(10000 * 100);
 
-When ("I click on Name Initials button {string}", async function (loc) {
-    homePage = new HomePage(getPage());
-    homePage.ClickButton (loc);
+
+When ("I clear {string} element on Account Search Page", async function (element) {
+    accountSearchPage = new AccountSearchPage(getPage());
+    accountSearchPage.clearImput(AccountSearchPageUtils.getElement(element));
 });
 
-When ("I chooce Search Settings option {string}", async function (loc) {
-    homePage.ClickButton(loc);
+When ("I click on {string} element on Account Search Page", async function (element) {
+    accountSearchPage.clickElement(AccountSearchPageUtils.getElement(element));
 });
 
-When ("I search Master Account ID {string}", async function (account) {
-    homePage.changeMasterAccount(account);
-});
-
-Then ("Verify that {string} contains {string}", async function (loc, text) {
-    homePage.verifycontains(loc, text);
+When ("I send the keys {string} to the {string} element on Account Search Page", async function name(input, element) {
+    accountSearchPage.sendKeys(AccountSearchPageUtils.getElement(element), input);
 });

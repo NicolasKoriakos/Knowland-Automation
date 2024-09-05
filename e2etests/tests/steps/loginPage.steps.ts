@@ -1,4 +1,4 @@
-import {Given, setDefaultTimeout, When} from "@cucumber/cucumber";
+import {Given, setDefaultTimeout, Then, When} from "@cucumber/cucumber";
 import { getPage } from "../../corelib/corelib.spec";
 import LoginPage from "../../tests/pages/loginPage";
 
@@ -20,7 +20,8 @@ When(
   loginPage.selectClient();
 });
 
-When(
+Then(
   "I am on Knowland Home Page", async function () {
   loginPage.confirmPage(); 
 });
+
