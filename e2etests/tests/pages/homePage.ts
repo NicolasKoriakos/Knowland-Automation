@@ -8,7 +8,7 @@ export default class HomePage {
   }
 
   async clickElement(element: string) {
-    await this.page.waitForTimeout(15000);
+    await this.page.waitForTimeout(20000);
     await this.page.locator(element).click();
   }
 
@@ -17,9 +17,10 @@ export default class HomePage {
     await this.page.waitForTimeout(2000);
     let count = 0;
     const expectedText = string;
+    let text;
 
-    while (string != expectedText) {
-      let text = this.page.locator(element).textContent;
+    while (text != expectedText) {
+      return text = this.page.locator(element).textContent;
       count++;
       if ((count = 10000)) {
         break;

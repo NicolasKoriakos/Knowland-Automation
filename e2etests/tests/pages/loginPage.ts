@@ -9,7 +9,7 @@ export default class LoginPage{
     }
 
     async goToApp(){
-        await this.page.goto("https://loginqa.knowland.com/");
+        await this.page.goto("https://loginqa.knowland.com/"), { timeout: 60000 };
     }
 
     async loginToApp (username:string , password:string) {

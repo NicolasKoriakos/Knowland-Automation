@@ -12,6 +12,6 @@ When ("I click on {string} element on Home Page", async function (element) {
     homePage.clickElement(KnowlandHomePageUtils.getElement(element));
 });
 
-Then ("Verify than {string} changes to {string} on Home Page", async function (element, string) {
+Then ('Verify than {string} changed to {string} on Home Page', async function (element, string) {
     homePage.verifycontains(KnowlandHomePageUtils.getElement(element), string);
-})
+});
