@@ -10,10 +10,11 @@ export default class AccountSearchPage{
       async clickElement(element: string) {
         await this.page.waitForTimeout(15000);
         await this.page.locator(element).click();
+        await this.page.waitForTimeout(4000);
       }
 
       async clearImput(element: string) {
-        await this.page.waitForTimeout(4000);
+       // await this.page.waitForTimeout(4000);
         await this.page.locator(element).clear();
       }
 
