@@ -27,8 +27,7 @@ export enum ElementEnum {
 }
 
 export const ElementMap: Record<ElementEnum, string> = {
-  [ElementEnum.MASTER_ACCOUNT_SEARCH_INPUT]:
-    "id=master_account_id_for_override",
+  [ElementEnum.MASTER_ACCOUNT_SEARCH_INPUT]:"id=master_account_id_for_override",
   [ElementEnum.SEARCH_BUTTON]: "id=master_account_id_search",
   [ElementEnum.APPLY_AND_EXIT]: "id=applyandexit",
 };

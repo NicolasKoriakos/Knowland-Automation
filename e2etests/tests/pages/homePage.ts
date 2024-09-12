@@ -17,9 +17,10 @@ export default class HomePage {
     await this.page.waitForTimeout(2000);
     let count = 0;
     const expectedText = string;
+    let text;
 
     while (string != expectedText) {
-      let text = this.page.locator(element).textContent;
+      text = this.page.locator(element).textContent;
       count++;
       if ((count = 10000)) {
         break;
