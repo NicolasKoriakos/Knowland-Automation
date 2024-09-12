@@ -6,7 +6,7 @@ Feature: Person Icon
     When I choose unlimited_markets client on client
     Then I am on Knowland Home Page
     
-  @1  
+  @KA01 @automated @Regression @PersonIconFeature
   Scenario: Search Settings
     When I click on "name_initials" element on Home Page
     And I click on "search_settings" element on Home Page

@@ -39,18 +39,15 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.NAME_INITIALS]: "id=user-initials",
   [ElementEnum.SEARCH_SETTINGS]: "id=search_settings",
   [ElementEnum.DASHBOARD_ACCOUNT_NAME]: "id=header-title-dashboard",
-  [ElementEnum.MY_PROPERTY_ATTRIBUTE]:
-    "//div[@class='client ng-tns-c3686997790-0']",
+  [ElementEnum.MY_PROPERTY_ATTRIBUTE]:"//div[@class='client ng-tns-c3686997790-0']",
   [ElementEnum.MENU]: "structural_navigation-bar_hamburger",
   [ElementEnum.CREATE_NEW_SEARCH]: "create_s_search",
   [ElementEnum.ACCOUNT_ATTRIBUTES]: "Structural_Nav-Bar_attributeTab_2",
   [ElementEnum.ADDRESS_FILTER]: "widget-btnAddress",
   [ElementEnum.SEARCH_COUNTER]: "#Structural_SearchActions_estimatedCount",
   [ElementEnum.CITY_FIELD]: "input[placeholder='Enter City']",
-  [ElementEnum.ESTIMATED_ACCOUNTS_COUNTER]:
-    "Structural_SearchActions_estimatedCount",
-  [ElementEnum.MAGNIFYING_GLASS_BUTTON]:
-    "Structural_SearchActions_recentSearchButton",
+  [ElementEnum.ESTIMATED_ACCOUNTS_COUNTER]:"Structural_SearchActions_estimatedCount",
+  [ElementEnum.MAGNIFYING_GLASS_BUTTON]:"Structural_SearchActions_recentSearchButton",
 };
 
 export namespace ElementEnum {
