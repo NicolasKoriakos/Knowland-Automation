@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
 export default class HomePage {
   page: Page;
@@ -7,24 +7,30 @@ export default class HomePage {
     this.page = page;
   }
 
-  async clickElement(element: string) {
-    await this.page.waitForTimeout(15000);
+  async clickElement(element: string){
+    await this.page.waitForSelector(element);
     await this.page.locator(element).click();
   }
 
-
-  async verifycontains(element: string, string: string) {
+  async verifyContains(element: string, string: string){
     await this.page.waitForTimeout(2000);
     let count = 0;
     const expectedText = string;
     let text;
 
-    while (string != expectedText) {
+    while (string != expectedText){
       text = this.page.locator(element).textContent;
       count++;
       if ((count = 10000)) {
         break;
       }
     }
+  }
+
+  async verifyCounter(element:string, counter:string){
+    const originalCounter = await this.page.locator(counter).innerText();
+    await this.page.locator(element).click();
+    let newCounter = await this.page.locator(counter).innerText();
+    expect (originalCounter != newCounter);
   }
 }

@@ -8,12 +8,15 @@ Feature: Smart Search
 
     @KA02 @CreateNewSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Create New Search
-        When I click on "Accounts&Events" in the top navigation bar
-        And I click on "New Custom Search"
-        And I fill out filters from all 3 top tabs
-        Then I confirm the estimated accounts count updates as filters are applied
-        When I click on "Run Search"
-        Then I verify the search results are displayed
+        When I click on "Accounts&Events" element on Home Page
+        And I click on "New_Custom_Search" element on Home Page
+        And I click on "Single_Day_Event" and confirm that "estimated_accounts_counter" chenges
+        And I click on "property_attributes" element on Home Page
+        And I click on "restaurant" and confirm that "estimated_accounts_counter" chenges
+        And I click on "account_attributes" element on Home Page
+        And I click on "corporate" and confirm that "estimated_accounts_counter" chenges
+        When I click on "run_search" element on Home Page
+        Then I verify the "search_results" are displayed on Search Results Page
 
     @KA03 @EditExistingSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Edit Existing Search
