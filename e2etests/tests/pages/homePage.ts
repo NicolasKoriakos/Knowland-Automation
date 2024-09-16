@@ -26,11 +26,4 @@ export default class HomePage {
       }
     }
   }
-
-  async verifyCounter(element:string, counter:string){
-    const originalCounter = await this.page.locator(counter).innerText();
-    await this.page.locator(element).click();
-    let newCounter = await this.page.locator(counter).innerText();
-    expect (originalCounter != newCounter);
-  }
 }

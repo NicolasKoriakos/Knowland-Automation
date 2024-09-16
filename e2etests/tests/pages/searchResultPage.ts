@@ -1,14 +1,20 @@
 import { expect, Page } from "@playwright/test";
 
 export default class SearchResultsPage{
-    page:Page;
+    
+  page:Page;
 
     constructor(page: Page) {
-        this.page = page;
-      }
+      this.page = page;
+    }
 
-  async verifyElement(element:string) {
-    expect (await this.page.locator(element).isVisible());
+    async verifyElement(element:string) {
+      expect (await this.page.locator(element).isVisible());
     
-   }  
+    }  
+
+    async clickElement(element: string){
+      await this.page.locator(element).click();
+    }
+
 }

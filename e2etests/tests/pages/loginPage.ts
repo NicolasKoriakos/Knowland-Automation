@@ -34,7 +34,7 @@ export default class LoginPage{
         }
     }
     async confirmPage(){
-        await this.page.waitForTimeout(5000);
+        await this.page.waitForTimeout(10000);
         let knowland = this.page.textContent("xpath=//img[@alt='KNOWLAND']");
 
         if (`${knowland}` === `Knowland`) {

@@ -10,20 +10,20 @@ Feature: Smart Search
     Scenario: Create New Search
         When I click on "Accounts&Events" element on Home Page
         And I click on "New_Custom_Search" element on Home Page
-        And I click on "Single_Day_Event" and confirm that "estimated_accounts_counter" chenges
-        And I click on "property_attributes" element on Home Page
-        And I click on "restaurant" and confirm that "estimated_accounts_counter" chenges
-        And I click on "account_attributes" element on Home Page
-        And I click on "corporate" and confirm that "estimated_accounts_counter" chenges
-        When I click on "run_search" element on Home Page
+        And I click on "Single_Day_Event" and confirm that "estimated_accounts_counter" changes
+        And I click on "property_attributes" element on Search Page
+        And I click on "restaurant" and confirm that "estimated_accounts_counter" changes
+        And I click on "account_attributes" element on Search Page
+        And I click on "corporate" and confirm that "estimated_accounts_counter" changes
+        When I click on "run_search" element on Search Page
         Then I verify the "search_results" are displayed on Search Results Page
 
     @KA03 @EditExistingSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Edit Existing Search
-        When I click on the "pencil icon" to edit an existing search
-        And I update a few filters
-        When I click on "Run Search"
-        Then I confirm the search results are updated
+        When I click on "Recent_Searches_Link" element on Home Page
+        And I click on "pencil_icon" element on Search Results Page
+        And I click on "Single_Day_Event" and confirm that "estimated_accounts_counter" changes
+        Then I click on "save_search" element on Search Page
 
     @KA04 @ScheduleSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Schedule a Search

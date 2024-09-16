@@ -15,7 +15,3 @@ When ("I click on {string} element on Home Page", async function (element) {
 Then ("Verify than {string} changed to {string} on Home Page", async function (element, string) {
     await homePage.verifyContains(KnowlandHomePageUtils.getElement(element), string);
 });
-
-When ("I click on {string} and confirm that {string} chenges", async function (element, counter) {
-    await homePage.verifyCounter(KnowlandHomePageUtils.getElement(element),KnowlandHomePageUtils.getElement(counter));
-});

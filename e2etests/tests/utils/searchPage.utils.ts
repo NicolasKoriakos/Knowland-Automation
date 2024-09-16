@@ -1,6 +1,6 @@
 // utils/SearchResultsPageUtils.ts
 
-export class SearchResultsPageUtils {
+export class SearchPageUtils {
   /**
    * Get the element for the specified ID.
    *
@@ -23,13 +23,29 @@ export class SearchResultsPageUtils {
 export enum ElementEnum {
   SEARCH_RESULTS = "search_results",
   PENCIL_ICON = "pencil_icon",
-
+  X_TRAILING = "X_Trailing",
+  ESTIMATED_ACCOUNTS_COUNTER = "estimated_accounts_counter",
+  SAVE_SEARCH = "save_search",
+  PROPERTY_ATTRIBUTES = "property_attributes",
+  ACCOUNT_ATTRIBUTES = "account_attributes",
+  SINGLE_DAY_EVENT = "Single_Day_Event",
+  RESTAURANT = "restaurant",
+  CORPORATE = "corporate",
+  RUN_SEARCH = "run_search",
 }
 
 export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.SEARCH_RESULTS]: "id=search-results",
   [ElementEnum.PENCIL_ICON]: "xpath=//i[@id='SearchExperiencePaneEdit']",
- 
+  [ElementEnum.X_TRAILING]: "xpath=//i[@class='fas fa-times clickable ng-star-inserted']",
+  [ElementEnum.ESTIMATED_ACCOUNTS_COUNTER]:"id=Structural_SearchActions_estimatedCount",
+  [ElementEnum.SAVE_SEARCH]:"xpath=//button[@id='submit_save_search']",
+  [ElementEnum.PROPERTY_ATTRIBUTES]: "id=Structural_Nav-Bar_attributeTab_1",
+  [ElementEnum.ACCOUNT_ATTRIBUTES]: "id=Structural_Nav-Bar_attributeTab_2",
+  [ElementEnum.SINGLE_DAY_EVENT]: "id=single-day-event",
+  [ElementEnum.RESTAURANT]: "xpath=//input[@class='restaurant-checkbox ng-untouched ng-pristine ng-valid']",
+  [ElementEnum.CORPORATE]:"xpath=//strong[normalize-space()='Corporate']//input[@type='checkbox']",
+  [ElementEnum.RUN_SEARCH]:"id=Structural_SearchActions_recentSearchButton",
 };
 
 export namespace ElementEnum {

@@ -1,4 +1,4 @@
-import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
+import { When, Then, setDefaultTimeout } from '@cucumber/cucumber';
 import SearchResultPage from "../pages/searchResultPage";
 import { getPage } from "../../corelib/corelib.spec";
 import { SearchResultsPageUtils } from '../utils/searchResultsPage.utils';
@@ -11,3 +11,8 @@ When ("I verify the {string} are displayed on Search Results Page", async functi
     searchResultsPage = new SearchResultPage(getPage());
     await searchResultsPage.verifyElement(SearchResultsPageUtils.getElement(element));
 });
+
+When ("I click on {string} element on Search Results Page", async function (element) {
+    searchResultsPage = new SearchResultPage(getPage());
+    await searchResultsPage.clickElement(SearchResultsPageUtils.getElement(element));
+})
