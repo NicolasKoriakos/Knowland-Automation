@@ -13,6 +13,18 @@ When ("I verify the {string} are displayed on Search Results Page", async functi
 });
 
 When ("I click on {string} element on Search Results Page", async function (element) {
-    searchResultsPage = new SearchResultPage(getPage());
     await searchResultsPage.clickElement(SearchResultsPageUtils.getElement(element));
 })
+
+When ("I check {string}", async function (element) {
+    searchResultsPage = new SearchResultPage(getPage());
+    await searchResultsPage.originalValue(SearchResultsPageUtils.getElement(element));
+});
+
+Then ("I verify that {string} changes", async function (element) {
+    await searchResultsPage.verifySchedule(SearchResultsPageUtils.getElement(element))
+});
+
+When ("I select {string} option in {string} dropdoun", async function (element, option) {
+    await searchResultsPage.dropdownOption(SearchResultsPageUtils.getElement(element),(option))
+});

@@ -4,7 +4,7 @@ Feature: Meeting Space Mix
     Given I am on Knowland Login Page
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     And I choose unlimited_markets client on client
-    Then I am on Knowland Home Page
+    Then I am on "Knowland" Home Page
 
   @KA33 @MeetingSpaceMix @NotAutomated @Regression @MeetingSpaceMixFeature
   Scenario: Meeting Space Mix Page Loads and Filters Update

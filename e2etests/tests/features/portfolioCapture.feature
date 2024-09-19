@@ -4,7 +4,7 @@ Feature: Portfolio Capture
     Given I am on Knowland Login Page
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     And I choose unlimited_markets client on client
-    Then I am on Knowland Home Page
+    Then I am on "Knowland" Home Page
 
   @KA52 @CompSetCapture @NotAutomated @Regression @PortfolioCaptureFeature
   Scenario: Comp Set Capture Data Loads

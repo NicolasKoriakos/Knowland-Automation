@@ -7,6 +7,11 @@ export default class HomePage {
     this.page = page;
   }
 
+  async confirmPage(element:string){
+    await this.page.waitForTimeout(5000);
+    expect (this.page.locator(element).isVisible());
+
+}
   async clickElement(element: string){
     await this.page.waitForSelector(element);
     await this.page.locator(element).click();
@@ -25,5 +30,9 @@ export default class HomePage {
         break;
       }
     }
+  }
+
+  async selectLink(element:string) {
+    await this.page.locator(element).first().click();
   }
 }

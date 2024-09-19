@@ -21,6 +21,7 @@ export class KnowlandHomePageUtils {
 }
 
 export enum ElementEnum {
+  KNOWLAND = "Knowland",
   NAME_INITIALS = "name_initials",
   SEARCH_SETTINGS = "search_settings",
   DASHBOARD_ACCOUNT_NAME = "dashboard_account_name",
@@ -29,7 +30,6 @@ export enum ElementEnum {
   MAGNIFYING_GLASS_BUTTON = "magnifying_glass_button",
   ACCOUNTS_AND_EVENTS = "Accounts&Events",
   NEW_CUSTOM_SEARCH = "New_Custom_Search",
- 
   RECENT_SEARCHES_LINK = "Recent_Searches_Link",
 }
 
@@ -42,7 +42,8 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.MAGNIFYING_GLASS_BUTTON]:"Structural_SearchActions_recentSearchButton",
   [ElementEnum.ACCOUNTS_AND_EVENTS]: "id=edit-btn-Accounts-&-Events",
   [ElementEnum.NEW_CUSTOM_SEARCH]: "id=new_custom_search",
-  [ElementEnum.RECENT_SEARCHES_LINK]: "xpath=//span[normalize-space()='My Market Activity']",
+  [ElementEnum.RECENT_SEARCHES_LINK]: ".relevance-sort-tooltip", 
+  [ElementEnum.KNOWLAND]: "xpath=//img[@alt='KNOWLAND']",
 };
 
 export namespace ElementEnum {

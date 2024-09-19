@@ -4,7 +4,7 @@ Feature: Market Snapshot
     Given I am on Knowland Login Page
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     And I choose unlimited_markets client on client
-    Then I am on Knowland Home Page
+    Then I am on "Knowland" Home Page
 
   @KA47 @MarketKPIs @NotAutomated @Regression @MarketSnapshotFeature
   Scenario: Market KPIs Data Loads and Filters Update

@@ -4,7 +4,7 @@ Feature: Usage Report
     Given I am on Knowland Login Page
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     And I choose unlimited_markets client on client
-    Then I am on Knowland Home Page
+    Then I am on "Knowland" Home Page
 
   @KA14 @UsageReport @NotAutomated @Regression @UsageReportFeature
   Scenario: View Usage Report and Update Filters

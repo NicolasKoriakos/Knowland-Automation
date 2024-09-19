@@ -4,7 +4,7 @@ Feature: Smart Search
         Given I am on Knowland Login Page
         When I access with my credentials "testinguser@gmail.com", "June@2024"
         When I choose unlimited_markets client on client
-        Then I am on Knowland Home Page
+        Then I am on "Knowland" Home Page
 
     @KA02 @CreateNewSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Create New Search
@@ -20,17 +20,21 @@ Feature: Smart Search
 
     @KA03 @EditExistingSearch @NotAutomated @Regression @SmartSearchFeature
     Scenario: Edit Existing Search
-        When I click on "Recent_Searches_Link" element on Home Page
+        When I click on first "Recent_Searches_Link" on Home Page
+        And I check "search_results"
         And I click on "pencil_icon" element on Search Results Page
         And I click on "Single_Day_Event" and confirm that "estimated_accounts_counter" changes
         Then I click on "save_search" element on Search Page
+        Then I verify that "search_results" changes
 
     @KA04 @ScheduleSearch @NotAutomated @Regression @SmartSearchFeature
-    Scenario: Schedule a Search
-        When I click on the "search actions" dropdown from the search results
-        And I click on "Schedule"
-        And I set up the scheduler and save
-        Then I confirm the search moves to the "Scheduled Searches" section in the left pane
+    Scenario: Schedule a SearchPage
+        When I click on first "Recent_Searches_Link" on Home Page
+        And I check "container"
+        And I select "schedule" option in "search_actions" dropdoun
+        And I click on "schedule" element on Search Results Page
+        And I click on "save_schedule" element on Search Results Page 
+        Then I verify that "container" changes
 
     @KA05 @ViewSearchResults @NotAutomated @Regression @SmartSearchFeature
     Scenario: View Search Results
@@ -43,3 +47,6 @@ Feature: Smart Search
         Then I export the search results
 
 
+
+Then I verify that when I click on "search_actions", "schedule" and "save_schedule", "container" changes
+       

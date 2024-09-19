@@ -1,4 +1,5 @@
 import { Page } from "playwright-core";
+import { expect } from "playwright/test";
 
 export default class LoginPage{
 
@@ -20,7 +21,7 @@ export default class LoginPage{
     }
 
     async selectClient(){
-        await this.page.waitForTimeout(10000);
+        await this.page.waitForTimeout(2000);
         let url = this.page.url();
         await this.page.locator("id=client-btn-7811").click();
         let newUrl = this.page.url();
@@ -29,18 +30,8 @@ export default class LoginPage{
         try {
             await this.page.locator("id=client-btn-7811").click();
         } catch (error) {}
-        await this.page.waitForTimeout(2000);
         newUrl = this.page.url();
         }
     }
-    async confirmPage(){
-        await this.page.waitForTimeout(10000);
-        let knowland = this.page.textContent("xpath=//img[@alt='KNOWLAND']");
-
-        if (`${knowland}` === `Knowland`) {
-             console.log("pass");
-        } else {
-            console.log("failed to log in");
-        } 
-    }
+    
 }

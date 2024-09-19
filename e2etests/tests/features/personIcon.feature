@@ -4,7 +4,7 @@ Feature: Person Icon
     Given I am on Knowland Login Page
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     When I choose unlimited_markets client on client
-    Then I am on Knowland Home Page
+    Then I am on "Knowland" Home Page
     
   @KA01 @automated @Regression @PersonIconFeature
   Scenario: Search Settings

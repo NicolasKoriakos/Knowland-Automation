@@ -39,7 +39,7 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.PENCIL_ICON]: "xpath=//i[@id='SearchExperiencePaneEdit']",
   [ElementEnum.X_TRAILING]: "xpath=//i[@class='fas fa-times clickable ng-star-inserted']",
   [ElementEnum.ESTIMATED_ACCOUNTS_COUNTER]:"id=Structural_SearchActions_estimatedCount",
-  [ElementEnum.SAVE_SEARCH]:"xpath=//button[@id='submit_save_search']",
+  [ElementEnum.SAVE_SEARCH]:"xpath=//i[@class='fas fa-search']",
   [ElementEnum.PROPERTY_ATTRIBUTES]: "id=Structural_Nav-Bar_attributeTab_1",
   [ElementEnum.ACCOUNT_ATTRIBUTES]: "id=Structural_Nav-Bar_attributeTab_2",
   [ElementEnum.SINGLE_DAY_EVENT]: "id=single-day-event",

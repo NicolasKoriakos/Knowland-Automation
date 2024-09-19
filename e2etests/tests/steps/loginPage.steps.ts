@@ -8,20 +8,16 @@ setDefaultTimeout(10000 * 100);
 
 Given("I am on Knowland Login Page", async function () {
   loginPage = new LoginPage(getPage());
-  loginPage.goToApp();
+  await loginPage.goToApp();
 });
 
 When("I access with my credentials {string}, {string}", async function (username, password) {
-  loginPage.loginToApp(username, password);
+  await loginPage.loginToApp(username, password);
 });
 
 When(
   "I choose unlimited_markets client on client", async function () {
-  loginPage.selectClient();
+  await loginPage.selectClient();
 });
 
-Then(
-  "I am on Knowland Home Page", async function () {
-  loginPage.confirmPage(); 
-});
 
