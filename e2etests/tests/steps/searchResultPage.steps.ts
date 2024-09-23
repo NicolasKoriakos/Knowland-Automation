@@ -25,6 +25,3 @@ Then ("I verify that {string} changes", async function (element) {
     await searchResultsPage.verifySchedule(SearchResultsPageUtils.getElement(element))
 });
 
-When ("I select {string} option in {string} dropdoun", async function (element, option) {
-    await searchResultsPage.dropdownOption(SearchResultsPageUtils.getElement(element),(option))
-});

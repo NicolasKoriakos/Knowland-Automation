@@ -4,15 +4,15 @@ export default class SearchResultsPage{
   
   page:Page;
 
-    private originalCounter: string = '';
+    private originalVal: string = '';
 
     constructor(page: Page) {
       this.page = page;
     }
 
     async originalValue(element:string){
-      this.originalCounter = await this.page.locator(element).innerText(); 
-      console.log(this.originalCounter);
+      this.originalVal = await this.page.locator(element).innerText(); 
+      console.log(this.originalVal);
     }
 
     async verifyElement(element:string) {
@@ -25,11 +25,9 @@ export default class SearchResultsPage{
     }
 
     async verifySchedule(element:string){
+      await this.page.waitForTimeout(5000)
       let newValues = await this.page.locator(element).innerText();
-      expect (newValues).not.toBe(this.originalCounter);
+      expect (newValues).not.toBe(this.originalVal);
     }
 
-    async dropdownOption (element:string, option:string){
-      await this.page.selectOption(element, { label: option });
-    }
   }

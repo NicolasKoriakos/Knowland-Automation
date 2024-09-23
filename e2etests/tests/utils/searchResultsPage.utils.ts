@@ -24,8 +24,8 @@ export enum ElementEnum {
   SEARCH_RESULTS = "search_results",
   PENCIL_ICON = "pencil_icon",
   SEARCH_ACTIONS = "search_actions",
-  SCHEDULE = "schedule",
   SAVE_SCHEDULE = "save_schedule",
+  SAVE_SCHEDULE_OPTION = "save_schedule_option",
   CONTAINER = "container",
 }
 
@@ -33,8 +33,8 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.SEARCH_RESULTS]: "id=search-results",
   [ElementEnum.PENCIL_ICON]: "xpath=//i[@title='Edit Search']",
   [ElementEnum.SEARCH_ACTIONS]: "id=search-actions",
-  [ElementEnum.SCHEDULE]: "SCHEDULE",
   [ElementEnum.SAVE_SCHEDULE]: "xpath=//span[normalize-space()='Schedule']",
+  [ElementEnum.SAVE_SCHEDULE_OPTION]: "xpath=//li[@class='scheduleSearchBtn dropdown-button ng-star-inserted']",
   [ElementEnum.CONTAINER]:"xpath=//div[@class='main-container ng-star-inserted']",
 };
 

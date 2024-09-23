@@ -31,8 +31,8 @@ Feature: Smart Search
     Scenario: Schedule a SearchPage
         When I click on first "Recent_Searches_Link" on Home Page
         And I check "container"
-        And I select "schedule" option in "search_actions" dropdoun
-        And I click on "schedule" element on Search Results Page
+        And I click on "search_actions" element on Search Results Page
+        And I click on "save_schedule_option" element on Search Results Page
         And I click on "save_schedule" element on Search Results Page 
         Then I verify that "container" changes
 
