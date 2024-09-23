@@ -34,7 +34,7 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.PENCIL_ICON]: "xpath=//i[@title='Edit Search']",
   [ElementEnum.SEARCH_ACTIONS]: "id=search-actions",
   [ElementEnum.SAVE_SCHEDULE]: "xpath=//span[normalize-space()='Schedule']",
-  [ElementEnum.SAVE_SCHEDULE_OPTION]: "xpath=//li[@class='scheduleSearchBtn dropdown-button ng-star-inserted']",
+  [ElementEnum.SAVE_SCHEDULE_OPTION]: "4",
   [ElementEnum.CONTAINER]:"xpath=//div[@class='main-container ng-star-inserted']",
 };
 

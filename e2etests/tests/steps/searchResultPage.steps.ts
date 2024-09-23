@@ -25,3 +25,7 @@ Then ("I verify that {string} changes", async function (element) {
     await searchResultsPage.verifySchedule(SearchResultsPageUtils.getElement(element))
 });
 
+When ("I click on {string} dropdown element", async function (string) {
+    await searchResultsPage.clickText(string)
+});
+

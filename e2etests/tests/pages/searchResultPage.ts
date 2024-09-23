@@ -30,4 +30,9 @@ export default class SearchResultsPage{
       expect (newValues).not.toBe(this.originalVal);
     }
 
+    async clickText (string:string){
+      await this.page.locator('text="' + string + '"').click();
+
+    }
+
   }
