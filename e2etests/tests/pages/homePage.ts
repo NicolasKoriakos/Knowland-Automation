@@ -7,6 +7,11 @@ export default class HomePage {
     this.page = page;
   }
 
+  async confirmPage(element:string){
+    await this.page.waitForTimeout(5000);
+    expect (this.page.locator(element).isVisible());
+
+}
   async clickElement(element: string){
     await this.page.waitForSelector(element);
     await this.page.locator(element).click();
@@ -27,10 +32,7 @@ export default class HomePage {
     }
   }
 
-  async verifyCounter(element:string, counter:string){
-    const originalCounter = await this.page.locator(counter).innerText();
-    await this.page.locator(element).click();
-    let newCounter = await this.page.locator(counter).innerText();
-    expect (originalCounter != newCounter);
+  async selectLink(element:string) {
+    await this.page.locator(element).first().click();
   }
 }
