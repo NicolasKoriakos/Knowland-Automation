@@ -5,18 +5,27 @@ Feature: Property Set Manager
     When I access with my credentials "testinguser@gmail.com", "June@2024"
     And I choose unlimited_markets client on client
     Then I am on "Knowland" Home Page
+    When I click on "tools" element on Home Page
+    And I click on "competitive_set_manager" element on Home Page
 
   @KA17 @BuildPropertySets @NotAutomated @Regression @PropertySetFeature
   Scenario: Search Properties and Confirm Data
-    When I use the filters to search for hotels
-    Then I confirm the map and list update with the applied filters
-    When I expand a property card
-    Then I view the "Property Overview" and confirm it loads correctly
+    When I check "map_list_container" on Competitive Set Manager
+    And I click on "location_drop" element on Competitive Set Manager
+    And I click on "airport_filter" element on Competitive Set Manager
+    And I click on "outside" element on Competitive Set Manager
+    Then I confirm the "map_list_container" page updates
+    When I click on "property_card" element on Competitive Set Manager
+    Then I check that the "overview" contains the filter "airport"
 
   @KA18 @AddPropertyToCompSet @NotAutomated @Regression @PropertySetFeature
   Scenario: Add Single Hotel to Comp Set
-    When I click the "+ icon" to add a single hotel to an existing comp set
-    Then I confirm the hotel is added to the comp set successfully
+    When I check "add_icon" on Competitive Set Manager
+    And  I click on "add_icon" on Competitive Set Manager
+    And I click on "existing_compset" element on Competitive Set Manager
+    Then I confirm the "add_icon" page updates
+    When I select "checkbox" "1", "2" and "3" 
+    And I click on "top_add_icon"
 
   @KA19 @AddPropertiesInBulkToCompSet @NotAutomated @Regression @PropertySetFeature
   Scenario: Add Multiple Properties to Comp Set

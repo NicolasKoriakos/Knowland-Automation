@@ -8,8 +8,12 @@ Feature: Account Details Page
 
   @KA06 @AccountDetails @NotAutomated @Regression @AccountDetailsPage
   Scenario: View Account Details Page
-    When I click on an "Account name" from the search results page
-    Then I confirm it takes me to the "Account Details" page with the search applied
+    When I click on first "Recent_Searches_Link" on Home Page
+    And I click on "an_account_name" hyperlink on Search Results Page
+    And I am on the new window
+    Then Then I confirm that I can see the "account_name"
+    And I verify that the "market" is the same as the "filter_market"
+
     And I confirm the search is applied for "Booking Analysis", "Past Bookings", and "Estimated Revenue Calculator"
     When I toggle to "Past Bookings" to turn the search off
     Then I view all data

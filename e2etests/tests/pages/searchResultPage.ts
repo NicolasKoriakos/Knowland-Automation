@@ -35,4 +35,8 @@ export default class SearchResultsPage{
 
     }
 
+    async selectCheck(element:string) {
+      await this.page.locator(element).first().click();
+    }
+    
   }
