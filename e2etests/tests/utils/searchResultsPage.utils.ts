@@ -24,18 +24,20 @@ export enum ElementEnum {
   SEARCH_RESULTS = "search_results",
   PENCIL_ICON = "pencil_icon",
   SEARCH_ACTIONS = "search_actions",
-  SAVE_SCHEDULE = "save_schedule",
-  SAVE_SCHEDULE_OPTION = "save_schedule_option",
+  SCHEDULE_BUTTON = "schedule_button",
   CONTAINER = "container",
+  CHECK = "check",
+  ACCOUNT_NAME = "an_account_name",
 }
 
 export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.SEARCH_RESULTS]: "id=search-results",
-  [ElementEnum.PENCIL_ICON]: "xpath=//i[@title='Edit Search']",
+  [ElementEnum.PENCIL_ICON]: "xpath=//i[@title='Edit Scheduled Search']",
   [ElementEnum.SEARCH_ACTIONS]: "id=search-actions",
-  [ElementEnum.SAVE_SCHEDULE]: "xpath=//span[normalize-space()='Schedule']",
-  [ElementEnum.SAVE_SCHEDULE_OPTION]: "4",
-  [ElementEnum.CONTAINER]:"xpath=//div[@class='main-container ng-star-inserted']",
+  [ElementEnum.SCHEDULE_BUTTON]: "xpath=//i[@class='fas fa-save']",
+  [ElementEnum.CONTAINER]: "xpath=//div[@class='main-container ng-star-inserted']",
+  [ElementEnum.CHECK]: ".fa.fa-check",
+  [ElementEnum.ACCOUNT_NAME]: "id=account-name2635"
 };
 
 export namespace ElementEnum {

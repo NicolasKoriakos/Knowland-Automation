@@ -6,7 +6,7 @@ Feature: Smart Search
         When I choose unlimited_markets client on client
         Then I am on "Knowland" Home Page
 
-    @KA02 @CreateNewSearch @NotAutomated @Regression @SmartSearchFeature
+    @KA02 @CreateNewSearch @Automated @Regression @SmartSearchFeature
     Scenario: Create New Search
         When I click on "Accounts&Events" element on Home Page
         And I click on "New_Custom_Search" element on Home Page
@@ -18,7 +18,7 @@ Feature: Smart Search
         When I click on "run_search" element on Search Page
         Then I verify the "search_results" are displayed on Search Results Page
 
-    @KA03 @EditExistingSearch @NotAutomated @Regression @SmartSearchFeature
+    @KA03 @EditExistingSearch @Automated @Regression @SmartSearchFeature
     Scenario: Edit Existing Search
         When I click on first "Recent_Searches_Link" on Home Page
         And I check "search_results"
@@ -27,24 +27,24 @@ Feature: Smart Search
         Then I click on "save_search" element on Search Page
         Then I verify that "search_results" changes
 
-    @KA04 @ScheduleSearch @NotAutomated @Regression @SmartSearchFeature
+    @KA04 @ScheduleSearch @Automated @Regression @SmartSearchFeature
     Scenario: Schedule a SearchPage
         When I click on first "Recent_Searches_Link" on Home Page
         And I check "container"
         And I click on "search_actions" element on Search Results Page
         And I click on "Schedule" dropdown element
-        And I click on "save_schedule" element on Search Results Page 
+        And I click on "schedule_button" element on Search Results Page 
         Then I verify that "container" changes
 
     @KA05 @ViewSearchResults @NotAutomated @Regression @SmartSearchFeature
     Scenario: View Search Results
-        When I disable a filter using the left pane highlights
+        When I click on first "Recent_Searches_Link" on Home Page
+        And I check "search_results"
+        And I click on first "check" on pane highlights
+        Then I verify that "search_results" changes
         Then I confirm the search results update
         When I change the page sort to view results by booking count
         And I expand a booking to view booking details
         When I click on the "people icon" to assign an account
         And I add it to an account set
         Then I export the search results
-
-
-And I select "save_schedule_option" of "search_actions" dropdown

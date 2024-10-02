@@ -31,6 +31,9 @@ export enum ElementEnum {
   ACCOUNTS_AND_EVENTS = "Accounts&Events",
   NEW_CUSTOM_SEARCH = "New_Custom_Search",
   RECENT_SEARCHES_LINK = "Recent_Searches_Link",
+  TOOLS = "tools",
+  USAGE_REPORT = "usage_report",
+  COMPETITIVE_SET_MANAGER = "competitive_set_manager",
 }
 
 export const ElementMap: Record<ElementEnum, string> = {
@@ -44,6 +47,9 @@ export const ElementMap: Record<ElementEnum, string> = {
   [ElementEnum.NEW_CUSTOM_SEARCH]: "id=new_custom_search",
   [ElementEnum.RECENT_SEARCHES_LINK]: ".relevance-sort-tooltip", 
   [ElementEnum.KNOWLAND]: "xpath=//img[@alt='KNOWLAND']",
+  [ElementEnum.TOOLS]:"xpath=//button[@class='tw-inline-flex tw-items-center tw-text-sm tw-font-medium ng-tns-c1916064576-7']//*[name()='svg']//*[name()='path' and contains(@class,'ng-tns-c19')]",
+  [ElementEnum.USAGE_REPORT]: "id=usage_report",
+  [ElementEnum.COMPETITIVE_SET_MANAGER]:"id=comp_set_manager"
 };
 
 export namespace ElementEnum {

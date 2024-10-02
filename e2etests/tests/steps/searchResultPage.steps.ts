@@ -29,3 +29,7 @@ When ("I click on {string} dropdown element", async function (string) {
     await searchResultsPage.clickText(string)
 });
 
+When ("I click on first {string} on pane highlights", async function (element) {
+    await searchResultsPage.selectCheck(element);
+});
+
